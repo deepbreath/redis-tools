@@ -22,8 +22,6 @@ public class ClusterStatusCmd implements Command {
     }
 
     try (var cli = new Jedis(args[0])) {
-      System.out.println();
-
       var rn = cli.clusterNodes();
 
       int nc = 0;
